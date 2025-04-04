@@ -9,3 +9,11 @@ compile:
 
 run: $(BUILD_DIR)
 	./$(BUILD_DIR)/main hello
+
+t:
+	@if [ -f ./test.c ]; then \
+		$(CC) -o test test.c  -lssl -lcrypto; \
+		./test; \
+	else \
+		echo not found 'test.c'; \
+	fi 
