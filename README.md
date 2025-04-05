@@ -37,13 +37,20 @@ make
 ```
 
 ## Docker Usage
+
+Run from github registry
+
+```bash
+docker run --rm --name btc-wallet --net=none ghcr.io/arikato111/btc-wallet <password>
+```
+
 Build and run using Docker:
 ```bash
 # Build the Docker image
 docker build -t btc-wallet .
 
 # Run the container
-docker run --rm --name btc-wallet --net=none ghcr.io/arikato111/btc-wallet
+docker run --rm --name btc-wallet --net=none btc-wallet <password>
 ```
 
 ## Usage
