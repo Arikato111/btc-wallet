@@ -36,6 +36,12 @@ sudo dnf install openssl-devel
 make
 ```
 
+### Usage
+Generate a Bitcoin key from a password:
+```bash
+./build/bitcoin <password>
+```
+
 ## Docker Usage
 
 Run from github registry
@@ -51,12 +57,6 @@ docker build -t btc-wallet .
 
 # Run the container
 docker run --rm --name btc-wallet --net=none btc-wallet <password>
-```
-
-## Usage
-Generate a Bitcoin key from a password:
-```bash
-./build/bitcoin <password>
 ```
 
 ## Features
