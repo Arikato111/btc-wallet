@@ -36,6 +36,16 @@ sudo dnf install openssl-devel
 make
 ```
 
+## Docker Usage
+Build and run using Docker:
+```bash
+# Build the Docker image
+docker build -t btc-wallet .
+
+# Run the container
+docker run --rm --name btc-wallet --net=none ghcr.io/arikato111/btc-wallet
+```
+
 ## Usage
 Generate a Bitcoin key from a password:
 ```bash
