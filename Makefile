@@ -1,14 +1,15 @@
 CC = gcc
 BUILD_DIR=build
+BUILD_FILE=bitcoin
 
-default: compile run
+default: compile
 
 compile:
 	@mkdir -p $(BUILD_DIR)
-	$(CC) -I./include -o $(BUILD_DIR)/main src/* -lcrypto 
+	$(CC) -I./include -o $(BUILD_DIR)/$(BUILD_FILE) src/* -lcrypto 
 
 run: $(BUILD_DIR)
-	./$(BUILD_DIR)/main hello
+	./$(BUILD_DIR)/$(BUILD_FILE) hello
 
 t:
 	@if [ -f ./test.c ]; then \
